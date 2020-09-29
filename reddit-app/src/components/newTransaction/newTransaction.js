@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FormInput from '../form-input/form-input'
 import CustomButton from '../custom-button/custom-button.component'
 
-const NewTransaction = ({transactions,setTransactions,ammounts,setAmmounts}) => {
+const NewTransaction = ({transactions,setTransactions}) => {
     const [inputText,setInputText] = useState("")
     const [inputAmount,setInputAmount] = useState(0)
 
@@ -20,7 +20,7 @@ const NewTransaction = ({transactions,setTransactions,ammounts,setAmmounts}) => 
                 {text: inputText,ammount: inputAmount, id: Math.random() * 1000}, ...transactions
               ]);
               console.log(transactions);
-              setAmmounts([...ammounts, parseInt(inputAmount)])
+              
             }
             setInputText("")
             setInputAmount("")
