@@ -6,10 +6,10 @@ const Transaction = ({text,ammount,transaction,transactions,setTransactions}) =>
         
     }
     return (
-        <div className={`transaction-container ${ ammount < 0 ? "redBorder" : "greenBorder"}`}>
+        <div  className={`animate__animated animate__fadeInLeft transaction-container ${ ammount < 0 ? "redBorder" : "greenBorder"}`}>
         <p>{text}</p>
         <p>{ammount}</p>
-        <button onClick={deleteHandler} className="trash-btn">x</button>
+        <button onClick={deleteHandler} className="delete-btn">x</button>
          </div>
     )
 }
